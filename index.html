@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Putri Natasha Resume</title>
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
@@ -18,84 +22,146 @@
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        
+    <button id="theme-btn">🌙 Dark Mode</button>
+
     </nav>
 
     <section class="hero">
 
-        <div class="hero-text">
-            <h2>Hello, I'm</h2>
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Profile Picture">
+            </div>
+
+            <div class="hero-text">
 
             <h1>Putri Rabiatul Natasha</h1>
 
-            <p>
-                Information Management Student
-            </p>
+            <p>Information Management Student</p>
 
             <a href="#contact" class="btn">
                 Contact Me
             </a>
         </div>
 
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Profile Picture">
-        </div>
-
     </section>
 
     <section id="about" class="section">
 
-        <h2>About Me</h2>
+        <h2>Summary</h2>
 
         <div class="card">
 
             <p>
-                I am an Information Management student who is passionate about organizing information and improving digital records management. I enjoy learning new skills and developing my knowledge in information systems and technology.
-            </p>
-
+               Diploma in Information Management student with strong interest in 
+               information organization, database fundamentals, and administrative 
+               support.Currently pursuing studies while gaining hands-on experience 
+               through academic programs and part-time professional work.
+               Detail-oriented, adaptable, and capable of supporting documentation,
+               filing systems, and office operations in structured environments.
+               Seeking internship or entry-level opportunities in Information
+               Management, Records Management, or Administrative Support.
+            
         </div>
+    
 
     </section>
+    
 
     <section id="skills" class="section">
 
-        <h2>Skills</h2>
+        <h2>🛠 Skills</h2>
 
         <div class="card">
             <p>✔️ Typing Skills</p>
+        <div class="bar">
+            <div class="fill" style="width:99%"></div>
+        </div>
+
             <p>✔️ Microsoft Office</p>
+        <div class="bar">
+            <div class="fill" style="width:80%"></div>
+        </div>
+
             <p>✔️ Communication Skills</p>
+        <div class="bar">
+            <div class="fill" style="width:70%"></div>
+        </div>
+
             <p>✔️ Teamwork</p>
+        <div class="bar">
+            <div class="fill" style="width:90%"></div>
         </div>
 
     </section>
 
     <section id="education" class="section">
 
-        <h2>Education</h2>
+        <h2>🎓 Education</h2>
 
         <div class="card">
 
-            <h3>Universiti Teknologi MARA (UiTM)</h3>
+            <h3>Diploma in Information Management (In Progress)</h3>
 
             <p>
-                Diploma in Information Management
+                Universiti Teknologi MARA (UiTM) Cawangan Johor, Kampus Segamat
+                | 2024 - 2026
             </p>
 
+            <br>
+
+            <p>
+                Key areas of study include data organzation, database concepts, 
+                digital information management and documentation practices.
+            </p>
+
+            <br>
+
+            <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+            
+            <p>
+                SMK Seri Pantai |2018-2022
+
+            </p>
         </div>
 
-    </section>
+    <section class="section">
+
+    <h2>💼 Professional Experience</h2>
+
+    <div class="card">
+
+        <h3>Barista (Full-Time)</h3>
+
+        <p>
+            <strong>San Francisco Coffee Sdn. Bhd.</strong> | 2023
+        </p>
+
+        <br>
+
+        <ul>
+            <li>Handled daily cash transactions and payment processing.</li>
+            <li>Maintained cleanliness and organization of counter area.</li>
+            <li>Supported smooth daily operations through teamwork.</li>
+            <li>Delivered customer service in a fast-paced environment.</li>
+        </ul>
+
+    </div>
+
+
+</section>
 
     <section id="contact" class="section">
 
-        <h2>Contact</h2>
+        <h2>📞 Phone</h2>
 
         <div class="card">
 
             <p>📧 putrinatasha3108@gmail.com</p>
 
-            <p>📱 010 4343 587</p>
+            <p>📱 010-4343 587</p>
 
-            <p>📍 Malaysia</p>
+            <p>📍 Bangsar, Kuala Lumpur</p>
 
         </div>
 
@@ -104,6 +170,25 @@
     <footer>
         <p>Created by Putri Rabiatul Natasha</p>
     </footer>
+
+<script>
+
+const btn = document.getElementById("theme-btn");
+
+btn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        btn.innerHTML = "☀️";
+    }
+    else{
+        btn.innerHTML = "🌙";
+    }
+
+});
+
+</script>
 
 </body>
 </html>

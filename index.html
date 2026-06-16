@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
+<script>
+
+alert("Welcome to Putri Natasha's Resume Website!");
+
+</script>
+
 <body>
 
     <nav>
@@ -21,6 +28,8 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#languages">Languages</a></li>
         </ul>
         
     <button id="theme-btn">🌙 Dark Mode</button>
@@ -36,6 +45,7 @@
             <div class="hero-text">
 
             <h1>Putri Rabiatul Natasha</h1>
+            <p id="greeting"></p>
 
             <p>Information Management Student</p>
 
@@ -55,17 +65,34 @@
             <p>
                Diploma in Information Management student with strong interest in 
                information organization, database fundamentals, and administrative 
-               support.Currently pursuing studies while gaining hands-on experience 
-               through academic programs and part-time professional work.
-               Detail-oriented, adaptable, and capable of supporting documentation,
+               support. Currently pursuing studies while gaining hands on experience 
+               through academic programs and part time professional work.
+               Detail oriented, adaptable, and capable of supporting documentation,
                filing systems, and office operations in structured environments.
-               Seeking internship or entry-level opportunities in Information
+               Seeking internship or entry level opportunities in Information
                Management, Records Management, or Administrative Support.
             
         </div>
     
 
     </section>
+
+    <section id="experience" class="section">
+    <h2>📚 Program & Academic Experience</h2>
+
+    <div class="card">
+        <h3>Program Committee Member - University Collaboration Program</h3>
+        <p><strong>UiTM | 2025</strong></p>
+
+        <ul>
+            <li>Assisted in preparing program documents, certificates and materials.</li>
+            <li>Organized physical and digital documents for event coordination.</li>
+            <li>Communicated with students, lecturers and participants.</li>
+            <li>Supported administrative and documentation workflows.</li>
+        </ul>
+        </div>
+    </section>
+
     
 
     <section id="skills" class="section">
@@ -95,29 +122,103 @@
 
     </section>
 
+    <section class="section">
+
+    <h2>📊 Skills Summary</h2>
+
+    <div class="card">
+
+        <table>
+
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+                <th>Experience</th>
+            </tr>
+
+            <tr>
+                <td>Microsoft Office</td>
+                <td>Advanced</td>
+                <td>Academic & Administrative Tasks</td>
+            </tr>
+
+            <tr>
+                <td>Typing Skills</td>
+                <td>Excellent</td>
+                <td>Daily Documentation Work</td>
+            </tr>
+
+            <tr>
+                <td>Communication</td>
+                <td>Intermediate</td>
+                <td>Customer Service</td>
+            </tr>
+
+            <tr>
+                <td>Teamwork</td>
+                <td>Advanced</td>
+                <td>Group Projects & Workplace</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
     <section id="education" class="section">
 
         <h2>🎓 Education</h2>
 
         <div class="card">
+            <div class="edu-header">
+                
+<img src="logo.jpg"
+     alt="UiTM Logo"
+     usemap="#uitmmap"
+     width="80">
+
+<map name="uitmmap">
+
+<area
+shape="rect"
+coords="0,0,200,200"
+href="https://johor.uitm.edu.my/"
+target="_blank">
+
+</map>
+            </div>
 
             <h3>Diploma in Information Management (In Progress)</h3>
 
             <p>
-                Universiti Teknologi MARA (UiTM) Cawangan Johor, Kampus Segamat
+                <abbr title="Universiti Teknologi MARA">UiTM</abbr>
+                Cawangan Johor, Kampus Segamat
                 | 2024 - 2026
             </p>
 
-            <br>
-
-            <p>
+            <div class="card">
                 Key areas of study include data organzation, database concepts, 
-                digital information management and documentation practices.
-            </p>
+                digital information management and       documentation practices.
 
+        </div>
+             <map name="uitmmap">
+<area
+shape="rect"
+coords="0,0,200,200"
+href="https://johor.uitm.edu.my/"
+target="_blank">
+
+</map>
+
+                
             <br>
 
-            <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+            <h3>
+                Sijil Pelajaran Malaysia
+                (<abbr title="Sijil Pelajaran Malaysia">SPM</abbr>)
+            </h3>
             
             <p>
                 SMK Seri Pantai |2018-2022
@@ -148,7 +249,16 @@
 
     </div>
 
+</section>
 
+<section id="languages" class="section">
+    <h2>🗣️Languages</h2>
+
+    <div class="two-column">
+    <div class="card">
+        <p><strong>Malay - Native / Fluent</p>
+        <p><strong>English - Working Proficiency</p>
+    </div>
 </section>
 
     <section id="contact" class="section">
@@ -166,10 +276,22 @@
         </div>
 
     </section>
+    
+    <p>
+        🌐 Portfolio Website:
+        <a href="https://username.github.io/resume-website/"
+        target="_blank">
+        View My Resume Website
+    </a>
+</p>
 
     <footer>
-        <p>Created by Putri Rabiatul Natasha</p>
-    </footer>
+
+    <p>Created by Putri Rabiatul Natasha</p>
+
+    <p id="date"></p>
+
+</footer>
 
 <script>
 
@@ -188,7 +310,31 @@ btn.addEventListener("click", function(){
 
 });
 
+document.getElementById("date").innerHTML =
+"Last Updated: " + new Date().toDateString();
+
+</script>
+
+<script>
+
+let hour = new Date().getHours();
+
+let greeting;
+
+if(hour < 12){
+    greeting = "Good Morning ☀️";
+}
+else if(hour < 18){
+    greeting = "Good Afternoon 🌸";
+}
+else{
+    greeting = "Good Evening 🌙";
+}
+
+document.getElementById("greeting").innerHTML = greeting;
+
 </script>
 
 </body>
+</html>
 </html>

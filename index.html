@@ -7,334 +7,362 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+    
+
+    <style>
+        /* CSS Tambahan untuk Sistem Tab/Popup */
+        .section {
+            display: none; /* Sorokkan semua section secara default */
+        }
+        
+        .section.active {
+            display: block; /* Hanya tunjuk section yang ada class 'active' */
+            animation: fadeIn 0.5s ease-in-out; /* Kesan animasi popup lembut */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-
-<script>
-
-alert("Welcome to Putri Natasha's Resume Website!");
-
-</script>
 
 <body>
 
+    <script>
+        alert("Welcome to Putri Natasha's Resume Website!");
+    </script>
+
     <nav>
-        <h1 class="logo">Putri Natasha</h1>
+        <h1 class="logo"><a href="#" onclick="showSection('hero')">Putri Natasha</a></h1>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#languages">Languages</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+            <li><a href="#" onclick="showSection('education')">Education</a></li>
+            <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+            <li><a href="#" onclick="showSection('languages')">Languages</a></li>
+            <li><a href="#" onclick="showSection('family')">Family</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
         
-    <button id="theme-btn">🌙 Dark Mode</button>
-
+        <button id="theme-btn">🌙 Dark Mode</button>
     </nav>
 
-    <section class="hero">
-
+    <section id="hero" class="section active">
         <div class="hero-image">
             <img src="profile.jpg" alt="Profile Picture">
-            </div>
-
-            <div class="hero-text">
-
-            <h1>Putri Rabiatul Natasha</h1>
-            <p id="greeting"></p>
-
-            <p>Information Management Student</p>
-
-            <a href="#contact" class="btn">
-                Contact Me
-            </a>
         </div>
 
+        <div class="hero-text">
+    <h1>Putri Rabiatul Natasha</h1>
+    
+    <!-- KOD BARU YANG AWAK TAMPAI TADI DUDUK KAT SINI JIRAN DENGAN NAMA -->
+    <p id="greeting" style="font-size: 1.3rem !important; ..."></p>
+    <script>
+        function updateGreeting() { ... }
+        updateGreeting();
+    </script>
+    
+    <p>Information Management Student</p>
+    <!-- TAMPAL KOD BUTANG INI DI BAWAH TEXT INFORMATION MANAGEMENT STUDENT -->
+<a href="#" onclick="showSection('contact')" class="btn">Contact Me</a>
+</div>
     </section>
 
     <section id="about" class="section">
-
         <h2>Summary</h2>
-
         <div class="card">
-
             <p>
-               Diploma in Information Management student with strong interest in 
-               information organization, database fundamentals, and administrative 
-               support. Currently pursuing studies while gaining hands on experience 
-               through academic programs and part time professional work.
-               Detail oriented, adaptable, and capable of supporting documentation,
-               filing systems, and office operations in structured environments.
-               Seeking internship or entry level opportunities in Information
-               Management, Records Management, or Administrative Support.
-            
+                Diploma in Information Management student with strong interest in 
+                information organization, database fundamentals, and administrative 
+                support. Currently pursuing studies while gaining hands-on experience 
+                through academic programs and part time professional work.
+                Detail oriented, adaptable and capable of supporting documentation,
+                filing systems, and office operations in structured environments.
+                Seeking internship or entry level opportunities in Information
+                Management, Records Management or Administrative Support.
+            </p>
         </div>
-    
-
     </section>
 
     <section id="experience" class="section">
-    <h2>📚 Program & Academic Experience</h2>
+        <h2>📚 Program & Academic Experience</h2>
+        <div class="card">
+            <h3>Program Committee Member - University Collaboration Program</h3>
+            <p><strong>UiTM | 2025</strong></p>
+            <ul>
+                <li>Assisted in preparing program documents, certificates and materials.</li>
+                <li>Organized physical and digital documents for event coordination.</li>
+                <li>Communicating with students, lecturers and participants.</li>
+                <li>Supported administrative and documentation workflows.</li>
+            </ul>
+        </div>
 
-    <div class="card">
-        <h3>Program Committee Member - University Collaboration Program</h3>
-        <p><strong>UiTM | 2025</strong></p>
-
-        <ul>
-            <li>Assisted in preparing program documents, certificates and materials.</li>
-            <li>Organized physical and digital documents for event coordination.</li>
-            <li>Communicated with students, lecturers and participants.</li>
-            <li>Supported administrative and documentation workflows.</li>
-        </ul>
+        <h2>💼 Professional Experience</h2>
+        <div class="card">
+            <h3>Barista (Full-Time)</h3>
+            <p><strong>San Francisco Coffee Sdn. Bhd.</strong> | 2023</p>
+            <br>
+            <ul>
+                <li>Handled daily cash transactions and payment processing.</li>
+                <li>Maintained cleanliness and organization of counter area.
+                    </li>
+                <li>Supported smooth daily operations through teamwork.</li>
+                <li>Delivered customer service in a fast-paced environment.</li>
+            </ul>
         </div>
     </section>
-
-    
 
     <section id="skills" class="section">
-
         <h2>🛠 Skills</h2>
-
         <div class="card">
             <p>✔️ Typing Skills</p>
-        <div class="bar">
-            <div class="fill" style="width:99%"></div>
-        </div>
-
+            <div class="bar"><div class="fill" style="width:99%"></div></div>
             <p>✔️ Microsoft Office</p>
-        <div class="bar">
-            <div class="fill" style="width:80%"></div>
-        </div>
-
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
             <p>✔️ Communication Skills</p>
-        <div class="bar">
-            <div class="fill" style="width:70%"></div>
-        </div>
-
+            <div class="bar"><div class="fill" style="width:70%"></div></div>
             <p>✔️ Teamwork</p>
-        <div class="bar">
-            <div class="fill" style="width:90%"></div>
+            <div class="bar"><div class="fill" style="width:90%"></div></div>
         </div>
 
+        <h2>📊 Skills Summary</h2>
+        <div class="card">
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Level</th>
+                    <th>Experience</th>
+                </tr>
+                <tr>
+                    <td>Microsoft Office</td>
+                    <td>Advanced</td>
+                    <td>Academic & Administrative Tasks</td>
+                </tr>
+                <tr>
+                    <td>Typing Skills</td>
+                    <td>Excellent</td>
+                    <td>Daily Documentation Work</td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td>Intermediate</td>
+                    <td>Customer Service</td>
+                </tr>
+                <tr>
+                    <td>Teamwork</td>
+                    <td>Advanced</td>
+                    <td>Group Projects & Workplace</td>
+                </tr>
+            </table>
+        </div>
     </section>
 
-    <section class="section">
-
-    <h2>📊 Skills Summary</h2>
-
-    <div class="card">
-
-        <table>
-
-            <tr>
-                <th>Skill</th>
-                <th>Level</th>
-                <th>Experience</th>
-            </tr>
-
-            <tr>
-                <td>Microsoft Office</td>
-                <td>Advanced</td>
-                <td>Academic & Administrative Tasks</td>
-            </tr>
-
-            <tr>
-                <td>Typing Skills</td>
-                <td>Excellent</td>
-                <td>Daily Documentation Work</td>
-            </tr>
-
-            <tr>
-                <td>Communication</td>
-                <td>Intermediate</td>
-                <td>Customer Service</td>
-            </tr>
-
-            <tr>
-                <td>Teamwork</td>
-                <td>Advanced</td>
-                <td>Group Projects & Workplace</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-</section>
-
-
     <section id="education" class="section">
-
         <h2>🎓 Education</h2>
-
         <div class="card">
             <div class="edu-header">
-                
-<img src="logo.jpg"
-     alt="UiTM Logo"
-     usemap="#uitmmap"
-     width="80">
-
-<map name="uitmmap">
-
-<area
-shape="rect"
-coords="0,0,200,200"
-href="https://johor.uitm.edu.my/"
-target="_blank">
-
-</map>
+                <img src="logo.jpg" alt="UiTM Logo" usemap="#uitmmap" width="80">
+                <map name="uitmmap">
+                    <area shape="rect" coords="0,0,200,200" href="https://johor.uitm.edu.my/" target="_blank">
+                </map>
             </div>
 
             <h3>Diploma in Information Management (In Progress)</h3>
-
             <p>
                 <abbr title="Universiti Teknologi MARA">UiTM</abbr>
-                Cawangan Johor, Kampus Segamat
-                | 2024 - 2026
+                Cawangan Johor, Kampus Segamat | 2024 - 2026
             </p>
 
             <div class="card">
-                Key areas of study include data organzation, database concepts, 
-                digital information management and       documentation practices.
-
-        </div>
-             <map name="uitmmap">
-<area
-shape="rect"
-coords="0,0,200,200"
-href="https://johor.uitm.edu.my/"
-target="_blank">
-
-</map>
-
-                
-            <br>
-
-            <h3>
-                Sijil Pelajaran Malaysia
-                (<abbr title="Sijil Pelajaran Malaysia">SPM</abbr>)
-            </h3>
+                Key areas of study include data organization, database concepts, 
+                digital information management and documentation practices.
+            </div>
             
-            <p>
-                SMK Seri Pantai |2018-2022
+            <br>
+            <h3>Sijil Pelajaran Malaysia (<abbr title="Sijil Pelajaran Malaysia">SPM</abbr>)</h3>
+            <p>SMK Seri Pantai | 2018-2022</p>
+        </div>
+    </section>
 
-            </p>
+    <section id="languages" class="section">
+        <h2>🗣 Languages</h2>
+        <div class="two-column">
+            <div class="card">
+                <p><strong>Malay</strong> - Native / Fluent</p>
+                <p><strong>English</strong> - Working Proficiency</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- SECTION FAMILY & FRIENDS (VERSI BANYAK GAMBAR) -->
+<section id="family" class="section">
+    <h2>👨‍👩‍👧‍👦 My Precious Moments</h2>
+    
+    <div class="card">
+        <!-- ================= KATEGORI 1: FAMILY ================= -->
+        <h3 style="border-bottom: 2px solid #e066a6; padding-bottom: 5px; margin-bottom: 15px;">❤️ My Lovely Family</h3>
+        
+        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px;">
+            
+            <!-- Gambar Family 1 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="family.jpg" alt="Family 1" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;"></p>
+            </div>
+
+            <!-- Gambar Family 2 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="family 2.jpg" alt="Family 2" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;"></p>
+            </div>
+
+            <!-- Gambar Family 3 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="family 3.jpg" alt="Family 3" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;"></p>
+            </div>
+
         </div>
 
-    <section class="section">
+        <!-- ================= KATEGORI 2: FRIENDS ================= -->
+        <h3 style="border-bottom: 2px solid #e066a6; padding-bottom: 5px; margin-bottom: 15px;">✨ My Amazing Friends</h3>
+        
+        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+            
+            <!-- Gambar Friend 1 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="friend 2.jpg" alt="Friend 1" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;">UiTM Besties</p>
+            </div>
 
-    <h2>💼 Professional Experience</h2>
+            <!-- Gambar Friend 2 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="friend.jpg" alt="Friend 2" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;">Classmates</p>
+            </div>
 
-    <div class="card">
+            <!-- Gambar Friend 3 -->
+            <div class="gallery-item" style="text-align: center;">
+                <img src="friend 3.jpg" alt="Friend 3" style="width: 100%; height: 180px; object-fit: cover; border-radius: 12px; border: 3px solid #e066a6; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <p style="margin-top: 5px; font-weight: 500; color: #555;">Outing Day</p>
+            </div>
 
-        <h3>Barista (Full-Time)</h3>
-
-        <p>
-            <strong>San Francisco Coffee Sdn. Bhd.</strong> | 2023
-        </p>
-
-        <br>
-
-        <ul>
-            <li>Handled daily cash transactions and payment processing.</li>
-            <li>Maintained cleanliness and organization of counter area.</li>
-            <li>Supported smooth daily operations through teamwork.</li>
-            <li>Delivered customer service in a fast-paced environment.</li>
-        </ul>
-
+        </div>
     </div>
 
-</section>
+    <!-- ================= BAHAGIAN AUDIO (DI BAWAH FRIENDS) ================= -->
+        <div class="audio-player" style="margin-top: 40px; text-align: center; padding-top: 20px; border-top: 2px dashed #e066a6;">
+            <h3 style="color: #b83280; margin-bottom: 10px;">🎵 My Favorite Background Song</h3>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Click play to listen while browsing my moments!</p>
+            
+            <!-- Tag Audio HTML5 standard -->
+            <audio controls style="width: 100%; max-width: 400px; border-radius: 30px; background: #f1f3f4; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <source src="Raim Laode - IQRO FOLK VERSION OFFICIAL LYRIC VIDEO.mp3" type="audio/mpeg">
+                Browser awak tidak menyokong elemen audio ini.
+            </audio>
+        </div>
 
-<section id="languages" class="section">
-    <h2>🗣️Languages</h2>
-
-    <div class="two-column">
-    <div class="card">
-        <p><strong>Malay - Native / Fluent</p>
-        <p><strong>English - Working Proficiency</p>
-    </div>
 </section>
 
     <section id="contact" class="section">
-
-        <h2>📞 Phone</h2>
-
+        <h2>📞 Contact Me</h2>
         <div class="card">
-
             <p>📧 putrinatasha3108@gmail.com</p>
-
-            <p>📱 010-4343 587</p>
-
-            <p>📍 Bangsar, Kuala Lumpur</p>
-
-        </div>
-
-    </section>
-    
-    <p>
-        🌐 Portfolio Website:
-        <a href="https://username.github.io/resume-website/"
-        target="_blank">
-        View My Resume Website
+            <!-- GANTIKAN DI BAHAGIAN NOMBOR TELEFON CONTACT AWAK -->
+<p style="font-size: 1.1rem; color: #555; display: flex; align-items: center; gap: 8px;">
+    📞 Phone: 
+    <a href="https://wa.me/60104343587" target="_blank" style="text-decoration: none; color: #a37081; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+        010-4343 587
+        <!-- Simbol WhatsApp SVG Comel -->
+        <svg xmlns="http://www.w3.org/2000/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366" style="transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.43.003 9.85-4.415 9.853-9.847.002-2.63-1.023-5.101-2.881-6.959-1.858-1.858-4.331-2.88-6.952-2.881-5.43 0-9.85 4.417-9.854 9.848-.001 2.122.581 4.15 1.682 5.957l-.982 3.589 3.682-.966zm11.431-7.073c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.174.2-.298.3-.496.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+        </svg>
     </a>
 </p>
+            <p>📍 Bangsar, Kuala Lumpur</p>
+        </div>
+        <br>
+        <p>
+            🌐 Portfolio Website:
+            <a href="https://username.github.io/resume-website/" target="_blank">View My Resume Website</a>
+        </p>
+    </section>
 
     <footer>
+        <p>Created by Putri Rabiatul Natasha</p>
+        <p id="date"></p>
+    </footer>
 
-    <p>Created by Putri Rabiatul Natasha</p>
+    <script>
+        // 1. Fungsi Utama untuk Tukar-tukar Section (Sistem Popup/Tab)
+        function showSection(sectionId) {
+            // Ambil semua elemen yang ada class 'section'
+            const sections = document.querySelectorAll('.section');
+            
+            // Sorokkan semua section dengan membuang class 'active'
+            sections.forEach(sec => {
+                sec.classList.remove('active');
+            });
+            
+            // Tunjukkan section yang dipilih sahaja dengan menambah class 'active'
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
 
-    <p id="date"></p>
+        // 2. Skrip Dark Mode asal awak
+        const btn = document.getElementById("theme-btn");
+        btn.addEventListener("click", function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                btn.innerHTML = "☀️";
+            } else {
+                btn.innerHTML = "🌙";
+            }
+        });
 
-</footer>
+        // 3. Tarikh Kemas Kini
+        document.getElementById("date").innerHTML = "Last Updated: " + new Date().toDateString();
 
-<script>
+        // 4. Skrip Ucapan Selamat (Greeting) Berdasarkan Waktu
+        let hour = new Date().getHours();
+        let greeting;
+        if(hour < 12){
+            greeting = "Good Morning ☀️";
+        } else if(hour < 18){
+            greeting = "Good Afternoon 🌸";
+        } else {
+            greeting = "Good Evening 🌙";
+        }
+        document.getElementById("greeting").innerHTML = greeting;
+    </script>
+    <script>
+    function updateGreeting() {
+        const greetingElement = document.getElementById('greeting');
+        const hour = new Date().getHours();
+        let greetingText = "";
 
-const btn = document.getElementById("theme-btn");
+        if (hour < 12) {
+            greetingText = "Good Morning, Welcome to My Space! ☀️";
+        } else if (hour < 17) {
+            greetingText = "Good Afternoon, Glad to Have You Here! 🌤️";
+        } else if (hour < 20) {
+            greetingText = "Good Evening, Thanks for Visiting! 🌆";
+        } else {
+            greetingText = "Good Night, Have a Sweet Browsing! 🌙";
+        }
 
-btn.addEventListener("click", function(){
-
-    document.body.classList.toggle("dark-mode");
-
-    if(document.body.classList.contains("dark-mode")){
-        btn.innerHTML = "☀️";
+        greetingElement.innerHTML = greetingText;
     }
-    else{
-        btn.innerHTML = "🌙";
-    }
-
-});
-
-document.getElementById("date").innerHTML =
-"Last Updated: " + new Date().toDateString();
-
-</script>
-
-<script>
-
-let hour = new Date().getHours();
-
-let greeting;
-
-if(hour < 12){
-    greeting = "Good Morning ☀️";
-}
-else if(hour < 18){
-    greeting = "Good Afternoon 🌸";
-}
-else{
-    greeting = "Good Evening 🌙";
-}
-
-document.getElementById("greeting").innerHTML = greeting;
-
+    // Jalankan fungsi bila page siap di-load
+    window.onload = updateGreeting;
 </script>
 
 </body>
-</html>
 </html>
